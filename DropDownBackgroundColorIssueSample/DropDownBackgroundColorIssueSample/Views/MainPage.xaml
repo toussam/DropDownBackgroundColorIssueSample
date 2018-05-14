@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DropDownBackgroundColorIssueSample"
+             xmlns:sfAutoComplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+             x:Class="DropDownBackgroundColorIssueSample.MainPage">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="AutoCompleteStyle" TargetType="sfAutoComplete:SfAutoComplete">
+        <Setter Property="AutoCompleteMode" Value="Suggest" />
+        <Setter Property="BorderColor" Value="#E3EBF2" />
+        <Setter Property="DropDownBackgroundColor" Value="White" />
+        <Setter Property="DropDownItemHeight" Value="50" />
+        <Setter Property="DropDownTextSize" Value="14" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="MaximumDropDownHeight" Value="200" />
+        <Setter Property="MinimumPrefixCharacters" Value="1" />
+        <Setter Property="SuggestionMode" Value="Contains" />
+        <Setter Property="TextSize" Value="14" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+        <Setter Property="WatermarkColor" Value="Silver" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
+  <Grid>
+    <sfAutoComplete:SfAutoComplete x:Name="AutoComplete" Style="{StaticResource AutoCompleteStyle}" Watermark="type the letter 't' here" />
+  </Grid>
+</ContentPage>
